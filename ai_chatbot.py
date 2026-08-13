@@ -7,6 +7,7 @@ GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 def chatbot_response(prompt):
+    response = client.models.generate_content(
 
 response = client.models.generate_content(
     model="gemini-2.5-flash",
